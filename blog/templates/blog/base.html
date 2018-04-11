@@ -9,7 +9,7 @@
     </head>
     <body background="#" id="webBody" >
     	<div class="container">
-            <header class="navbar navbar-default navbar-expand-md">
+            <header class="navbar navbar-default navbar-expand-md fixed-top">
                 <h3 class="navbar-brand">The Ultimate Blog</h3>
                 <!-- <img id="SiteLogo" style="max-width:50px" src='media/BlueLogo.png'></a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimary">
@@ -36,13 +36,19 @@
                   <button class="btn my-2 my-sm-0" type="submit" value='Search'>Search</button>
                 </form>
             </header>
+		</div>
 
-        	    	{% block content %}
-			    	{% endblock %}
-			
-			
-		</div>	
+        <div id="intro" class="view">
+                <div class="full-bg-img">
+                
+            </div>
+            </div>	
+        <main>
 
+                    {% block content %}
+                    {% endblock %}
+
+        </main>    
         <!-- jQuery CDN -->
         
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
