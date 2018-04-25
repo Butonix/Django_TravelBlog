@@ -25,35 +25,24 @@
 				    </div>
 				</div>
 			</section>
+			<section class="row">
+				<div class="col-lg-8 profile-info">
+					<img class="float-left" src="media/Profile_Me.jpg" alt="Me in Photo">
+					<h2>Arindam Roychowdhury</h2>
+					<p>Pune , India</p>
+				</div>
+
+				<div class="col-lg-4">
+					<p>Hi, I am Arindam. I love coding , blogging and web apps designing.</p>
+				</div>
+			</section>
 		</div>
 		<div class="col-md-4">	
-			<section class="gallery col-md-4">
+			<section class="gallery">
 				{% for post in fav_posts %}
-					<a href="{% url 'post_details' post.pk %}"><img src={{ post.first_image }}>{{ post.title }}</a>
+					<img src="#">
+					<a href="{% url 'post_details' post.pk %}">{{ post.title }}</a>
 				{% endfor %}
-			</section>
-		</div>	
-
-	<section class="row">
-		<div class="col-lg-8 profile-info">
-			<img class="float-left" src="media/Profile_Me.jpg" alt="Me in Photo">
-			<h2>Arindam Roychowdhury</h2>
-			<p>Pune , India</p>
-		</div>
-
-		<div class="col-lg-4">
-			<p>Hi, I am Arindam. I love coding , blogging and web apps designing.</p>
-		</div>
-	</section>
-
-	
-		<div class="row">
-			<!-- Featured Stories Section -->	
-			<section class="col-md-8">
-				<p>Featured Story</p>
-			</section>
-			<section class="col-md-4">
-				<p>Right Column</p>
 			</section>
 		</div>	
 	</div>

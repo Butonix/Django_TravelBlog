@@ -9,8 +9,7 @@
 
     </head>
     <body background="#" id="webBody" >
-    	<div class="container-fluid" id="with-navbar">
-            <header class="navbar navbar-default navbar-expand-md">
+    	    <nav class="navbar navbar-dark navbar-expand-md navbar-expand-lg mb-4" style="background-color: #074FB7;">
                 <h3 class="navbar-brand">The Ultimate Blog</h3>
                 <!-- <img id="SiteLogo" style="max-width:50px" src='media/BlueLogo.png'></a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimary">
@@ -36,11 +35,11 @@
                   <input id="searchbox" name="keyword" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn my-2 my-sm-0" type="submit" value='Search'>Search</button>
                 </form>
-            </header>
+            </nav>
 
-        	    	{% block content %}
-			    	{% endblock %}
-			
+        <div class="container-fluid" id="with-navbar">
+            {% block content %}
+			{% endblock %}
 		</div>
 
         <!-- jQuery CDN -->
