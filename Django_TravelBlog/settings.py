@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8ht8yamzqd3%u1yztx_xe88a!*528&j+1zmy((a))cr=9o7-0^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '172.29.169.103']
 
@@ -128,6 +128,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# This is used to avoid redirect to "/profile" page after login
+LOGIN_REDIRECT_URL = '/'
 
 
 ####################################

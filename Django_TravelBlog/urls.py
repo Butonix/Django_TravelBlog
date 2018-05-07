@@ -23,10 +23,11 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),   
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/v1/posts/', include('blog.api_url')),
+    url('accounts/', include('django.contrib.auth.urls')), 
+    url(r'', include('blog.urls')),
 ]   + static(
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT) + static(

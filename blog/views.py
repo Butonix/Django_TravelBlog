@@ -116,6 +116,11 @@ def home(request):
             post.first_image = '#'
     return render(request, 'blog/home_new.html', {'fav_posts':fav_posts})
 
+def update_profile(request, user_id):
+    user = User.objects.get(pk=user_id)
+    user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+    user.save()
+
 
 def get_favourites():
     #This function returns a list of post with fav as True
