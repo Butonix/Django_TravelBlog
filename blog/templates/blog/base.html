@@ -25,20 +25,25 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about_me' %}">AboutMe</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Gallery</a>
                         </li>
                         
                         {% if user.is_authenticated %}
-                        <li>User: {{ user.get_username }}</li>
-                         <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>   
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about_me' %}">{{ user.get_username }}</a>
+                        </li>
+                         <li>
+                            <a class="nav-link" href="{% url 'logout' %}?next={{ request.path }}">
+                                Logout
+                            </a></li>
                        {% else %}
-                         <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">
+                                Login
+                            </a>
+                        </li>   
                        {% endif %} 
                       </ul>
-                    </ul>   
                 </nav>
                 <form id="searchform" class="form-inline my-2 my-lg-0" action="{% url 'post_search' %}" method="get">
                   <input id="searchbox" name="keyword" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

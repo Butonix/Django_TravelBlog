@@ -28,11 +28,12 @@ urlpatterns = [
     url(r'^api/v1/posts/', include('blog.api_url')),
     url('accounts/', include('django.contrib.auth.urls')), 
     url(r'', include('blog.urls')),
-]   + static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT) + static(
+               ]   + static(
+
+    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT ) + static(
         settings.STATIC_URL,
-        document_root=settings.STATIC_ROOT) 
+        document_root=settings.STATIC_ROOT
+        ) 
 
 
 handler500 = views.error_500
